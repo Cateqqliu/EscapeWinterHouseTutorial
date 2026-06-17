@@ -14,3 +14,5 @@ This is my Unity project tutorial, the story is about the winter house murder. A
 ![image](https://github.com/Cateqqliu/EscapeWinterHouseTutorial/blob/main/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202026-06-17%20155800.png)
 用Gemini生成之後變成：
 ![image](https://github.com/Cateqqliu/EscapeWinterHouseTutorial/blob/main/Gemini_Generated_Image_jhdttdjhdttdjhdt.png)
+
+當有一個定調的風格之後，就可以開始用這個風格生成所有其他的內容物。
