@@ -11,9 +11,7 @@
 * 🔍 **快速搜尋**：右上角的搜尋框可以幫助你快速找到特定的程式碼或除錯關鍵字。
 
 ---
-<img src="images/Start_screen.png" width="500">
-<img src="images/Play_screen.png" width="500">
-<img src="images/End_screen.png" width="500">
+<img src="images/Start_screen.png" width="500"> <img src="images/Play_screen.png" width="500"> <img src="images/End_screen.png" width="500">
 
 ## 🕵️‍♂️ 遊戲劇情簡介
 
