@@ -4,7 +4,7 @@
 
 ### 🎮 遊戲試玩版 (Windows .exe)
 這是打包完成的最終遊戲檔案，解壓縮後點擊執行檔即可遊玩。
-👉 **[點此下載《Winter House》遊戲實體]([https://github.com/Cateqqliu/EscapeWinterHouseTutorial/releases/tag/v1.0])**
+👉 **[點此下載《Winter House》遊戲實體](https://github.com/Cateqqliu/EscapeWinterHouseTutorial/releases/tag/v1.0)**
 
 ### 🛠️ 教學專案原始碼 (Unity Project)
 這份壓縮檔包含了本教學中所有的 C# 腳本、AI 生成去背素材、以及音效設定。
