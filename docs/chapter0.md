@@ -17,10 +17,10 @@
 
 ~~**跟AI討價還價**~~
 
-<img src="images/AI生圖.png" width="500">
+<img src="images/AI生圖.png" width="800">
 
 然後跟AI討論的過程需要的只有耐心和語言表達能力，所以不需要太擔心，只要訴求說得足夠清楚就可以生出想要的圖片。
-<img src="images/AI生圖1.png" width="500">
+<img src="images/AI生圖1.png" width="800">
 
 
 ## ✂️ 第二步：元素分離（從大圖中挖出寶物）
