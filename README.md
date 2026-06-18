@@ -16,3 +16,5 @@ This is my Unity project tutorial, the story is about the winter house murder. A
 ![image](https://github.com/Cateqqliu/EscapeWinterHouseTutorial/blob/main/Gemini_Generated_Image_jhdttdjhdttdjhdt.png)
 
 當有一個定調的風格之後，就可以開始用這個風格生成所有其他的內容物。
+
+為了之後操作方便，所有生成出來的物品都一定要叫AI幫你做成個別取用的元素，
