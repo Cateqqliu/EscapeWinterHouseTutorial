@@ -41,7 +41,7 @@
    * `Play_Scene` 必須在裡面。
    * `End_Scene` 必須在裡面。
    * 每一個場景左邊的小框框都**必須打勾**！
-<img src="images/加入場景.png" width="800">
+<img src="images/場景順序.png" width="800">
 
 ---
 
