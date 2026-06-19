@@ -11,6 +11,7 @@
 * 核心機制實戰
   * [第四章：第一幕的雙雄連線！GameManager 與 SceneLoader](chapter4.md)
   * [第五章：實體道具互動！Box Collider 與對話框的完美串接](chapter5.md)
-  * [第六章：喚醒聽覺！背景音樂與互動音效實裝](chapter3.md)
+  * [第六章：喚醒聽覺！背景音樂與互動音效實裝](chapter6.md)
+  * [第七章：Windows 遊戲出廠 SOP 與防呆檢查](chapter7.md)
 
 * 持續更新中，盡請期待 ~
