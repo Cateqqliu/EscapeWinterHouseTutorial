@@ -9,7 +9,7 @@
   * [第三章：結局場景佈置與重置按鈕視覺設計](chapter3.md)
 
 * 核心機制實戰
-  * [第四章：實體道具點擊與對話框](chapter4.md)
+  * [第四章：第一幕的雙雄連線！GameManager 與 SceneLoader](chapter4.md)
   * [第五章：跨場景計數與大總管設計](chapter5.md)
 
 * 持續更新中，盡請期待 ~
