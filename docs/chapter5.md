@@ -10,10 +10,15 @@
 
 在 Unity 中，滑鼠是點不到一張「純圖片」的，它只能點擊到「碰撞體 (Collider)」。
 
-1. 點選 `--- Interactables ---` 資料夾底下的道具（例如 `Mug` 馬克杯）。
+1. 點選包含圖片的資料夾底下的道具（例如 `Mug` 馬克杯）。
+<img src="images/點擊資料夾.png" width="800">
+
 2. 在右側 `Inspector` 點擊 `Add Component`，加入 **`Box Collider 2D`**（如果是 3D 專案請選 `Box Collider`）。
+<img src="images/加碰撞.png" width="500">
+
 3. 點擊 `Edit Collider` 的小圖示，調整綠色框框，讓它完美包覆住馬克杯。
    *(這塊綠色區域，就是未來玩家滑鼠可以點擊的感應區！)*
+<img src="images/編輯碰撞.png" width="800">
 
 ---
 
@@ -21,26 +26,65 @@
 
 接下來，我們要給這個馬克杯大腦，讓它知道「被點擊時要說什麼話」。
 
-1. 在 `Scripts` 資料夾建立新 C# 腳本，命名為 **`InteractableItem`**。
+1. 在 `Scripts` 資料夾建立新 C# 腳本，命名為 **`SimpleDialogue`**。
 2. 將腳本拖曳掛載到馬克杯上。
 3. 雙擊打開腳本，寫入以下程式碼：
 
 ```csharp
 using UnityEngine;
 
-public class InteractableItem : MonoBehaviour
+public class SimpleDialogue : MonoBehaviour
 {
-    [Header("道具設定")]
-    public string itemName; // 道具名稱
-    [TextArea] // 讓文字輸入框變大，方便打很多字
-    public string description; // 點擊後要顯示的對話內容
+    [Header("點擊後要說的話")]
+    [TextArea(2, 5)]
+    public string dialogueText = "這是一段測試文字...";
 
-    // 這是 Unity 內建的神奇方法！只要物件有 Collider 且被滑鼠點擊，就會自動執行
-    private void OnMouseDown()
+    // ★ 就是漏了這行！現在加上去了
+    [Header("專屬點擊音效 (可以留空)")]
+    public AudioClip clickSound; 
+
+    private Collider2D myCollider;
+
+    private void Start()
     {
-        Debug.Log("玩家點擊了：" + itemName);
-        
-        // 呼叫 GameManager，把對話內容傳過去請它顯示
-        GameManager.Instance.ShowDialogue(description);
+        // 自動抓取自己身上的碰撞器
+        myCollider = GetComponent<Collider2D>();
+    }
+
+    private void Update()
+    {
+        // 1. 偵測玩家有沒有按下 mouse 左鍵
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (Camera.main == null) return;
+
+            // 2. 轉換滑鼠座標
+            Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            // 3. 數學判定：有點在框框內就觸發
+            if (myCollider != null && myCollider.OverlapPoint(mouseWorldPos))
+            {
+                TriggerDialogue();
+            }
+        }
+    }
+
+    private void TriggerDialogue()
+    {
+        if (GameManager.Instance != null)
+        {
+            // 第一步：呼叫大總管彈出對話框
+            GameManager.Instance.ShowDialogue(dialogueText);
+            
+            // 第二步：如果這個物品有專屬音效，呼叫大總管播出來！
+            if (clickSound != null)
+            {
+                GameManager.Instance.PlaySFX(clickSound);
+            }
+        }
+        else
+        {
+            Debug.LogWarning("找不到大總管 (GameManager)！對話框無法顯示。");
+        }
     }
 }
