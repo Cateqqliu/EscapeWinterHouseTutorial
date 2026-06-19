@@ -13,5 +13,8 @@
   * [第五章：實體道具互動！Box Collider 與對話框的完美串接](chapter5.md)
   * [第六章：喚醒聽覺！背景音樂與互動音效實裝](chapter6.md)
   * [第七章：Windows 遊戲出廠 SOP 與防呆檢查](chapter7.md)
+   
+* 番外篇
+  * [AI合作建議番外篇：《Winter House》Unity 開發避坑總結與除錯指南](caution.md) 
 
 * 持續更新中，盡請期待 ~
