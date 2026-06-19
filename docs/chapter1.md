@@ -1,4 +1,4 @@
-# 第一章：打造 Start 場景與 UI 中文方塊字救星
+<img width="1587" height="820" alt="image" src="https://github.com/user-attachments/assets/78d6d3ed-1379-4ed3-922e-39e41c3e98a7" /># 第一章：打造 Start 場景與 UI 中文方塊字救星
 
 歡迎來到《Winter House》的實戰開發階段！作為玩家進入遊戲的第一印象，Start 場景（開始畫面）通常不需要複雜的 3D 模型與物理運算，而是由精美的 **2D 圖片與 UI (使用者介面)** 所組成。
 
@@ -8,11 +8,19 @@
 
 ## 🎬 第一步：建立 Start_Scene 與 UI 畫布 (Canvas)
 
-首先，我們要把舞台搭建起來。
+首先，我們要把舞台搭建起來，長得像下面這樣。
+
+<img src="images/Start_screen.png" width="800">
 
 1. 在 `Project` 視窗的 `_Scenes` 資料夾中，點擊右鍵 ➔ `Create` ➔ `Scene`，命名為 **`Start_Scene`** 並雙擊打開它。
+<img src="images/新場景.png" width="800">
+
 2. 在左側的 `Hierarchy` (階層) 視窗空白處，點擊右鍵 ➔ `UI` ➔ **`Canvas` (畫布)**。
+<img src="images/新畫布.png" width="800">
+
 3. Unity 會自動幫你生成一個 `Canvas` 以及一個負責處理滑鼠點擊的 `EventSystem`（千萬別刪掉它，不然按鈕會全部失效！）。
+<img src="images/EventSystem.png" width="800">
+
 
 > **💡 畫布是什麼？** 
 > Canvas 就像是貼在玩家螢幕玻璃上的一層透明塑膠片，所有的 2D 圖片、按鈕、對話框都必須放在 Canvas 底下，才不會跟 3D 遊戲世界混在一起。
@@ -24,10 +32,13 @@
 還記得我們在「第零章」用 AI 生成並去背好的圖片嗎？現在要把它們掛到畫布上了。
 
 1. 確認你的圖片已經拉進 Unity，並且在右側 Inspector 面板中，`Texture Type` 已經設為 **`Sprite (2D and UI)`**。
-2. 在 `Hierarchy` 的 `Canvas` 上點擊右鍵 ➔ `UI` ➔ **`Image`**。
-3. 將這個新生成的物件命名為 `Background`。
-4. 點選 `Background`，在右側 Inspector 找到 `Image` 元件裡的 **`Source Image`** 欄位，把你準備好的 2D 背景圖拖曳進去！
-5. 重複以上步驟，再建立一個 `Image` 用來放遊戲標題（Logo）。你可以透過拖曳邊框或調整 `Rect Transform` 來決定它們在畫面上的大小與位置。
+<img src="images/加入背景.png" width="800">
+
+2. 直接在 `Hierarchy` 拖入要當背景的圖片，將這個新生成的物件命名為 `Background`。
+<img src="images/背景在視窗.png" width="800">
+
+3. 重複以上步驟，再建立遊戲標題（Logo）。你可以透過拖曳邊框或調整 `Rect Transform` 來決定它們在畫面上的大小與位置。
+<img src="images/調整背景.png" width="800">
 
 ---
 
