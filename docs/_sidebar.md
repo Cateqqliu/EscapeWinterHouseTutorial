@@ -5,7 +5,7 @@
 * 遊戲開發入門
   * [第零章：AI 輔助素材生成與前置處理流](chapter0.md)
   * [第一章：打造 Start 場景與 UI 中文方塊字救星](chapter1.md)
-  * [第二章：UI 畫布與防跑版設定](chapter2.md)
+  * [第二章：佈局 Play 場景與破解「UI 跑版地獄」](chapter2.md)
 
 * 核心機制實戰
   * [第三章：實體道具點擊與對話框](chapter3.md)
