@@ -8,16 +8,23 @@
 
 ## 🎵 第一步：設置環境背景音樂 (BGM)
 
-背景音樂最簡單，它只需要一個喇叭，並且在遊戲開始時自動、無縫地重複播放即可。
+背景音樂最簡單，它只需要一個喇叭，並且在遊戲開始時自動、無縫地重複播放即可；音效則需要確定只有點擊時才會響起，所以需要另外設定觸發。
 
-1. 在 `Play_Scene` 場景左側的 `Hierarchy` 中，點選你的 `--- Managers ---` 空物件。
-2. 在它底下按右鍵 ➔ `Create Empty`，建立一個子物件並命名為 **`BGM_Manager`**。
-3. 點選 `BGM_Manager`，在右側 `Inspector` 點擊 `Add Component`，加入 **`Audio Source`**（這是 Unity 的虛擬喇叭）。
-4. **關鍵設定：**
+1. 在 `Play_Scene` 場景左側的 `Hierarchy` 中，點選你的 `GameManager`物件。
+
+2. 在右側 `Inspector` 點擊 `Add Component`，加入兩個 **`Audio Source`**（這是 Unity 的虛擬喇叭，一個放置背景音樂，一個放置）。
+
+3. **背景音樂關鍵設定：**
    * **`AudioClip`**：把你準備好的背景音樂檔（例如 `Winter_BGM.mp3`）拖曳到這個欄位裡。
    * **`Play On Awake`**：確認有**勾選**（遊戲一執行就會自動播放）。
    * **`Loop`**：務必**勾選**！（這樣音樂播完才會自動從頭開始，達成無縫循環）。
-   * **`Volume` (音量)**：AI 生成的音樂通常很大聲，建議先調小到 `0.3` 左右，才不會蓋過遊戲音效。
+<img src="images/背景音樂.png" width="500">
+
+4. **點擊音效關鍵設定：**
+   * **`AudioClip`**：把你準備好的音效檔（例如 `ClickSound.mp3`）拖曳到這個欄位裡。
+   * **`Play On Awake`**：確認**沒有勾選**（遊戲一執行就會自動播放）。
+   * **`Loop`**：務必**不要勾選**！（這樣音效才不會一直）。
+<img src="images/音效.png" width="500">
 
 ---
 
@@ -37,40 +44,31 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [Header("UI 綁定")]
-    public GameObject dialoguePanel; 
-    public TMP_Text dialogueText;    
+    //======中間略=====//   
 
-    [Header("音效綁定")] // 新增：用來分類介面
-    public AudioSource sfxPlayer;    // 新增：大總管專屬的音效喇叭
-
-    private void Awake()
-    {
-        Instance = this; 
-    }
-
-    private void Start()
-    {
-        dialoguePanel.SetActive(false);
-    }
-
-    public void ShowDialogue(string content)
-    {
-        dialogueText.text = content; 
-        dialoguePanel.SetActive(true); 
-    }
-
-    public void CloseDialogue()
-    {
-        dialoguePanel.SetActive(false);
-    }
-
-    // 新增：開放給所有道具呼叫的「播放音效」功能
+    // ====== ★ 全新功能：供全遊戲物件呼叫的「播放音效」功能 ======
     public void PlaySFX(AudioClip clip)
     {
-        if (clip != null)
+        // 防呆機制：確認音效喇叭和音訊檔案都存在，才執行播放
+        if (sfxSource != null && clip != null)
         {
-            sfxPlayer.PlayOneShot(clip); // PlayOneShot 可以讓音效重疊播放，不會互相切斷！
+            // 使用 PlayOneShot 可以讓多個音效同時重疊播放，不會互相切斷
+            sfxSource.PlayOneShot(clip);
         }
     }
+    
+
+    // ====== ★ 新增功能：切換背景音樂 ======
+    public void PlayBGM(AudioClip newBGM)
+    {
+        if (bgmSource != null && newBGM != null)
+        {
+            // 防呆：如果現在已經在播這首歌，就繼續播，不要重頭開始
+            if (bgmSource.clip == newBGM) return;
+
+            bgmSource.clip = newBGM; // 換上新的錄音帶
+            bgmSource.Play();        // 開始播放
+        }
+    }
+    // ==========================================================
 }
