@@ -45,7 +45,12 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     //======中間略=====//   
-
+    // ====== ★ 全新功能：音樂與音效系統的喇叭插槽 ======
+    [Header("音樂與音效系統")]
+    public AudioSource bgmSource; // 負責背景音樂的喇叭 (會循環播放)
+    public AudioSource sfxSource; // 負責音效的喇叭 (放點擊聲、過關聲)
+    // ================================================
+    
     // ====== ★ 全新功能：供全遊戲物件呼叫的「播放音效」功能 ======
     public void PlaySFX(AudioClip clip)
     {
