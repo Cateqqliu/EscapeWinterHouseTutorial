@@ -1,4 +1,4 @@
-<img width="1587" height="820" alt="image" src="https://github.com/user-attachments/assets/78d6d3ed-1379-4ed3-922e-39e41c3e98a7" /># 第一章：打造 Start 場景與 UI 中文方塊字救星
+# 第一章：打造 Start 場景與 UI 中文方塊字救星
 
 歡迎來到《Winter House》的實戰開發階段！作為玩家進入遊戲的第一印象，Start 場景（開始畫面）通常不需要複雜的 3D 模型與物理運算，而是由精美的 **2D 圖片與 UI (使用者介面)** 所組成。
 
