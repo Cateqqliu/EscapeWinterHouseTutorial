@@ -14,6 +14,7 @@
 2. 點擊左下角的 **`Player Settings...`**，會彈出一個充滿設定的超大視窗。
 3. 在最上方的 **Company Name** 輸入你的開發者名稱（或工作室名稱），在 **Product Name** 確認填入 **`Winter House`**。
 4. **換上專屬 Icon：** 找到 `Default Icon` 欄位，把你用 AI 生成的精美素材（例如那個有雪景的小屋，或沾血的馬克杯）拖曳進去。這樣玩家在電腦桌面上看到的就會是你的專屬遊戲圖示！
+<img src="images/輸出設定.png" width="800">
 
 ---
 
@@ -40,6 +41,7 @@
    * `Play_Scene` 必須在裡面。
    * `End_Scene` 必須在裡面。
    * 每一個場景左邊的小框框都**必須打勾**！
+<img src="images/加入場景.png" width="800">
 
 ---
 
