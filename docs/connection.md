@@ -13,3 +13,7 @@
 > **💡 專案開啟須知：**
 > 為了節省下載空間，專案檔已剔除 `Library` 暫存資料夾。首次使用 Unity Hub 開啟此專案時，Unity 會需要幾分鐘的時間重新生成底層環境，請耐心等待進度條跑完即可。
 
+### 專案demo影片
+- https://youtu.be/PufzbVrQBrE
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PufzbVrQBrE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
