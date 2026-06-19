@@ -10,6 +10,6 @@
 
 * 核心機制實戰
   * [第四章：第一幕的雙雄連線！GameManager 與 SceneLoader](chapter4.md)
-  * [第五章：跨場景計數與大總管設計](chapter5.md)
+  * [第五章：實體道具互動！Box Collider 與對話框的完美串接](chapter5.md)
 
 * 持續更新中，盡請期待 ~
