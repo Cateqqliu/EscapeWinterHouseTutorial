@@ -13,6 +13,8 @@
 * 👈 **側邊導覽列**：請點擊左側目錄，選擇你想閱讀的開發章節。
 * 🔍 **快速搜尋**：右上角的搜尋框可以幫助你快速找到特定的程式碼或除錯關鍵字。
 
+整個專案會分成入門的整體佈局和進階設定兩大個部分進行教學，以下是個人在遊戲設定上的背景簡介。
+
 ---
 <img src="images/Start_screen.png" width="300"><img src="images/play_screen.png" width="300"><img src="images/End_screen.png" width="300">
 
